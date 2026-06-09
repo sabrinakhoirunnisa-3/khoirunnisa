@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby - Sabrina Khoirunnisa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #e5d9d3; 
+            display: flex;
+            justify-content: center;
+            color: #222;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background-color: #f9f6f0; 
+            min-height: 100vh;
+            position: relative;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            overflow-x: hidden;
+        }
+
+        /* Tombol Kembali (Back) */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #5c3d31;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeRight 0.8s ease-out forwards;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+            color: #222;
+        }
+
+        /* Judul Halaman */
+        .page-title {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3rem;
+            color: #222;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out 0.2s forwards;
+        }
+
+        /* Container untuk Kartu Hobi */
+        .hobby-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Desain Kartu Hobi */
+        .hobby-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(92, 61, 49, 0.05);
+            border-top: 4px solid #c8a996; /* Garis aksen di atas untuk hobi */
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(92, 61, 49, 0.12);
+            border-top-color: #5c3d31;
+        }
+
+        /* Waktu tunda kemunculan setiap kartu */
+        .hobby-card:nth-child(1) { animation-delay: 0.4s; }
+        .hobby-card:nth-child(2) { animation-delay: 0.6s; }
+        .hobby-card:nth-child(3) { animation-delay: 0.8s; }
+
+        /* Ikon Hobi */
+        .hobby-icon {
+            font-size: 2rem;
+            color: #5c3d31;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: transform 0.4s ease;
+        }
+
+        .hobby-card:hover .hobby-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Isi Teks dalam Kartu */
+        .hobby-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .hobby-desc {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* --- KEYFRAMES ANIMASI --- */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeRight {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tombol Kembali -->
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+
+        <!-- Judul -->
+        <h1 class="page-title">My Hobby</h1>
+
+        <!-- Daftar Hobi -->
+        <div class="hobby-list">
+            
+            <!-- Hobi 1 -->
+            <div class="hobby-card">
+                <i class="fa-solid fa-images hobby-icon"></i>
+                <h3 class="hobby-title">Digital Art & Editing</h3>
+                <p class="hobby-desc">
+                    Sangat antusias dengan pembuatan dan penyuntingan gambar digital beresolusi tinggi (4K/8K). Aku sangat menikmati eksperimen dengan gaya visual tertentu, seperti efek *cinematic*, *soft glam*, hingga *polaroid*.
+                </p>
+            </div>
+
+            <!-- Hobi 2 -->
+            <div class="hobby-card">
+                <i class="fa-solid fa-car-side hobby-icon"></i>
+                <h3 class="hobby-title">Automotive Styling</h3>
+                <p class="hobby-desc">
+                    Memiliki minat yang besar di dunia modifikasi otomotif. Aku sangat menyukai estetika mobil yang dimodifikasi, khususnya eksplorasi gaya *widebody* dan pemilihan *velg* ikonik untuk Nissan Silvia S15.
+                </p>
+            </div>
+
+            <!-- Hobi 3 -->
+            <div class="hobby-card">
+                <i class="fa-solid fa-masks-theater hobby-icon"></i>
+                <h3 class="hobby-title">Digital Storytelling</h3>
+                <p class="hobby-desc">
+                    Menghidupkan imajinasi melalui pengembangan *plot* cerita dan desain karakter. Mengelola interaksi *bot* dan menyusun narasi kreatif di Character.ai menjadi salah satu caraku menyalurkan ide-ide *storytelling*.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
