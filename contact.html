@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Sabrina Khoirunnisa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #e5d9d3; 
+            display: flex;
+            justify-content: center;
+            color: #222;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background-color: #f9f6f0; 
+            min-height: 100vh;
+            position: relative;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            overflow-x: hidden;
+        }
+
+        /* Tombol Kembali (Back) */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #5c3d31;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeRight 0.8s ease-out forwards;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+            color: #222;
+        }
+
+        /* Judul Halaman */
+        .page-title {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3rem;
+            color: #222;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out 0.2s forwards;
+        }
+
+        /* Container Tombol Kontak */
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Desain Tombol Kontak */
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background-color: #fff;
+            border-radius: 50px;
+            padding: 18px 25px;
+            text-decoration: none;
+            color: #222;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(92, 61, 49, 0.05);
+            border: 1px solid rgba(92, 61, 49, 0.1);
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out forwards;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        /* Efek Hover Tombol Kontak */
+        .contact-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            background-color: #5c3d31;
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(92, 61, 49, 0.2);
+            border-color: #5c3d31;
+        }
+
+        /* Animasi Ikon saat di-hover */
+        .contact-icon {
+            font-size: 1.5rem;
+            transition: transform 0.4s ease;
+        }
+
+        .contact-btn:hover .contact-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* Warna Ikon Default (sebelum di-hover) */
+        .contact-btn:nth-child(1) .contact-icon { color: #D44638; } /* Merah Email */
+        .contact-btn:nth-child(2) .contact-icon { color: #25D366; } /* Hijau WA */
+        .contact-btn:nth-child(3) .contact-icon { color: #0088cc; } /* Biru Telegram */
+        .contact-btn:nth-child(4) .contact-icon { color: #E1306C; } /* Pink IG */
+
+        /* Ikon jadi putih semua saat tombol di-hover */
+        .contact-btn:hover .contact-icon { color: #fff; }
+
+        /* Waktu tunda kemunculan setiap tombol */
+        .contact-btn:nth-child(1) { animation-delay: 0.3s; }
+        .contact-btn:nth-child(2) { animation-delay: 0.4s; }
+        .contact-btn:nth-child(3) { animation-delay: 0.5s; }
+        .contact-btn:nth-child(4) { animation-delay: 0.6s; }
+
+        /* Pesan Kecil di Bawah */
+        .contact-footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #888;
+            opacity: 0;
+            animation: fadeUp 1s ease-out 0.8s forwards;
+        }
+
+        /* --- KEYFRAMES ANIMASI --- */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeRight {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tombol Kembali -->
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+
+        <!-- Judul -->
+        <h1 class="page-title">Contact Me</h1>
+
+        <!-- Daftar Tombol Kontak -->
+        <div class="contact-list">
+            
+            <!-- Tombol Email -->
+            <a href="mailto:sabrinanisakhoirunnisa@gmail.com" class="contact-btn">
+                <i class="fa-solid fa-envelope contact-icon"></i>
+                <span>Email Me</span>
+            </a>
+
+            <!-- Tombol WhatsApp -->
+            <!-- Ganti angka 6281234567890 dengan nomor WA-mu (gunakan 62 tanpa angka 0 di depan) -->
+            <a href="https://wa.me/6281234567890" target="_blank" class="contact-btn">
+                <i class="fa-brands fa-whatsapp contact-icon"></i>
+                <span>WhatsApp</span>
+            </a>
+
+            <!-- Tombol Telegram -->
+            <!-- Ganti Xvsbnnc dengan username atau link grup Telegram-mu -->
+            <a href="https://t.me/Xvsbnnc" target="_blank" class="contact-btn">
+                <i class="fa-brands fa-telegram contact-icon"></i>
+                <span>Telegram</span>
+            </a>
+
+            <!-- Tombol Instagram -->
+            <!-- Ganti username_kamu dengan username IG-mu -->
+            <a href="https://instagram.com/username_kamu" target="_blank" class="contact-btn">
+                <i class="fa-brands fa-instagram contact-icon"></i>
+                <span>Instagram</span>
+            </a>
+
+        </div>
+
+        <div class="contact-footer">
+            <p>Let's connect and create something amazing together!</p>
+        </div>
+    </div>
+
+</body>
+</html>
