@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experience - Sabrina Khoirunnisa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #e5d9d3; 
+            display: flex;
+            justify-content: center;
+            color: #222;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background-color: #f9f6f0; 
+            min-height: 100vh;
+            position: relative;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            overflow-x: hidden;
+        }
+
+        /* Tombol Kembali (Back) */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #5c3d31;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeRight 0.8s ease-out forwards;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+            color: #222;
+        }
+
+        /* Judul Halaman */
+        .page-title {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3rem;
+            color: #222;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out 0.2s forwards;
+        }
+
+        /* Container untuk Kartu Pengalaman */
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Desain Kartu Pengalaman */
+        .exp-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(92, 61, 49, 0.05);
+            border-left: 4px solid #c8a996; /* Garis aksen di sebelah kiri */
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .exp-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(92, 61, 49, 0.1);
+            border-left-color: #5c3d31;
+        }
+
+        /* Waktu tunda kemunculan setiap kartu */
+        .exp-card:nth-child(1) { animation-delay: 0.4s; }
+        .exp-card:nth-child(2) { animation-delay: 0.6s; }
+        .exp-card:nth-child(3) { animation-delay: 0.8s; }
+
+        /* Isi Teks dalam Kartu */
+        .exp-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #5c3d31;
+            margin-bottom: 5px;
+        }
+
+        .exp-company {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #888;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .exp-desc {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #444;
+            text-align: justify;
+        }
+
+        /* --- KEYFRAMES ANIMASI --- */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeRight {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tombol Kembali -->
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
+
+        <!-- Judul -->
+        <h1 class="page-title">My Experience</h1>
+
+        <!-- Daftar Pengalaman -->
+        <div class="experience-list">
+            
+            <!-- Pengalaman 1 -->
+            <div class="exp-card">
+                <h3 class="exp-title">Data Analysis Researcher</h3>
+                <div class="exp-company">
+                    <i class="fa-solid fa-building-columns"></i> STMIK IKMI Cirebon
+                </div>
+                <p class="exp-desc">
+                    Melakukan penelitian mendalam untuk proyek skripsi yang berfokus pada eksplorasi dan analisis data penjualan BMW. Menggunakan bahasa pemrograman Python serta Google Colab untuk mengolah data kompleks menjadi informasi yang terstruktur. Tesis ini berhasil dipertahankan dalam sidang akademik pada 12 Maret 2026.
+                </p>
+            </div>
+
+            <!-- Pengalaman 2 -->
+            <div class="exp-card">
+                <h3 class="exp-title">Administration & Customer Service Explorer</h3>
+                <div class="exp-company">
+                    <i class="fa-solid fa-briefcase"></i> CV Polaris Komputama, SunnyShelz, Kahe Group
+                </div>
+                <p class="exp-desc">
+                    Mengembangkan keterampilan manajerial, administratif, dan layanan pelanggan melalui eksplorasi karier dan aplikasi ke berbagai perusahaan profesional, termasuk di industri F&B. Memiliki kemampuan adaptasi tinggi untuk bekerja di lingkungan yang serba cepat dan menuntut ketelitian.
+                </p>
+            </div>
+
+            <!-- Pengalaman 3 -->
+            <div class="exp-card">
+                <h3 class="exp-title">Digital Content Creator</h3>
+                <div class="exp-company">
+                    <i class="fa-solid fa-pen-nib"></i> Character.ai Content Channel
+                </div>
+                <p class="exp-desc">
+                    Membangun dan mengelola *channel* kreatif yang berfokus pada pengembangan *plot* dan desain *bot* interaktif. Berhasil menumbuhkan pengikut organik secara cepat sejak peluncurannya pada akhir Maret 2026 melalui interaksi komunitas yang konsisten.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
