@@ -4,17 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabrina Khoirunnisa - Data Analyst</title>
-    <!-- Import Font -->
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- Import FontAwesome untuk ikon email -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: 'Montserrat', sans-serif;
@@ -35,17 +29,15 @@
             overflow-x: hidden;
         }
 
-        /* Latar Belakang Atas */
         .header-bg {
             background-color: #5c3d31; 
-            background-image: url('background word.jpeg'); 
+            background-image: url('header-bg.jpg'); 
             background-size: cover;
             background-position: center;
             height: 220px;
             width: 100%;
         }
 
-        /* Area Profil */
         .profile-section {
             text-align: center;
             margin-top: -55px; 
@@ -58,7 +50,7 @@
             height: 115px;
             border-radius: 50%;
             background-color: #ccc;
-            background-image: url('Sabrina.jpeg'); 
+            background-image: url('profile.jpg'); 
             background-size: cover;
             background-position: center;
             border: 4px solid #f9f6f0; 
@@ -67,27 +59,17 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        /* Nama dengan Efek Shading/Kilauan */
         .name {
             font-family: 'Alex Brush', cursive; 
             font-size: 2.8rem;
             font-weight: normal;
             margin-top: 15px;
             letter-spacing: 1px;
-            
-            /* Konfigurasi Shading Gradasi */
-            background: linear-gradient(
-                120deg,
-                #222 30%,
-                #c8a996 50%, /* Warna kilauan shading (Cokelat muda / emas) */
-                #222 70%
-            );
+            background: linear-gradient(120deg, #222 30%, #c8a996 50%, #222 70%);
             background-size: 200% auto;
             color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
-
-            /* Animasi: Muncul membal, lalu kilauan berjalan terus */
             opacity: 0;
             animation: popBounce 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, shineShading 4s linear infinite 1s;
         }
@@ -103,7 +85,6 @@
             animation: fadeUp 1s ease-out 0.3s forwards;
         }
 
-        /* Tombol Link */
         .links-container {
             padding: 0 40px;
             display: flex;
@@ -162,7 +143,6 @@
             transform: scale(1.2) rotate(0deg);
         }
 
-        /* Informasi Email di Bawah */
         .footer-contact {
             margin-top: 45px;
             text-align: center;
@@ -182,58 +162,27 @@
             transform-origin: bottom center;
         }
 
-        /* --- KUMPULAN ANIMASI (KEYFRAMES) --- */
-
-        /* Animasi Kilauan Shading pada Teks */
-        @keyframes shineShading {
-            0% { background-position: -200% center; }
-            100% { background-position: 200% center; }
-        }
-
-        @keyframes floatSmooth {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        @keyframes popBounce {
-            0% { opacity: 0; transform: scale(0.8) translateY(20px); }
-            100% { opacity: 1; transform: scale(1) translateY(0); }
-        }
-
-        @keyframes fadeUpBounce {
-            0% { opacity: 0; transform: translateY(30px); }
-            60% { opacity: 1; transform: translateY(-5px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes wiggle {
-            0%, 80%, 100% { transform: rotate(0deg); }
-            85% { transform: rotate(-12deg); }
-            90% { transform: rotate(12deg); }
-            95% { transform: rotate(-6deg); }
-        }
-
+        /* KEYFRAMES */
+        @keyframes shineShading { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+        @keyframes floatSmooth { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        @keyframes popBounce { 0% { opacity: 0; transform: scale(0.8) translateY(20px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+        @keyframes fadeUpBounce { 0% { opacity: 0; transform: translateY(30px); } 60% { opacity: 1; transform: translateY(-5px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes wiggle { 0%, 80%, 100% { transform: rotate(0deg); } 85% { transform: rotate(-12deg); } 90% { transform: rotate(12deg); } 95% { transform: rotate(-6deg); } }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Latar Atas Cokelat -->
         <div class="header-bg"></div>
 
-        <!-- Profil, Nama, Gelar -->
         <div class="profile-section">
             <div class="profile-img"></div>
             <h1 class="name">Sabrina Khoirunnisa</h1>
             <p class="subtitle">DATA ANALYST</p>
         </div>
 
-        <!-- Tombol Menu -->
+        <!-- LINK SUDAH DIUPDATE SEMUA DI SINI -->
         <div class="links-container">
             <a href="about.html" class="link-btn">ABOUT ME</a>
             <a href="experience.html" class="link-btn">MY EXPERIENCE</a>
@@ -242,7 +191,6 @@
             <a href="#" class="link-btn">CONTACT ME</a>
         </div>
 
-        <!-- Kontak Email -->
         <div class="footer-contact">
             <i class="fa-regular fa-envelope"></i>
             <span>sabrinanisakhoirunnisa@gmail.com</span>
